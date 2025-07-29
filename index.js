@@ -9,6 +9,10 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
 
+app.get("/", (req, res) => {
+  res.send("POST /bfhl to get the response.");
+});
+
 app.use("/bfhl", apiRoute);
 app.use(errorHandler);
 
